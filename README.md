@@ -7,3 +7,5 @@ To learn how xamarin setup works to build a cross platform mobile app I used the
 To realease it: https://docs.microsoft.com/en-us/xamarin/android/deploy-test/release-prep/?tabs=windows
 
 or you can ask me to send you the apk or .ipa ;)
+
+![](joke.jpg)
