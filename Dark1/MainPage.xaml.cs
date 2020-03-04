@@ -49,5 +49,15 @@ namespace Dark1
 
             MyJokeProperty = joke.Joke;
         }
+
+        public void RightSwipe(object sender, EventArgs e)
+        {
+            fetchNewJoke();
+        }
+
+        public void LeftSwipe(object sender, EventArgs e)
+        {
+            fetchNewJoke();
+        }
     }
 }

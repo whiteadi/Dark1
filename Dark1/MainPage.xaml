@@ -13,8 +13,13 @@
            VerticalOptions="CenterAndExpand"
            TextColor="Black" FontSize = "Large"
            FontAttributes="Bold"
+           Margin="20" 
          />
         <Button Text="Gimme dark 1" Clicked="Button_Clicked" />
+        <StackLayout.GestureRecognizers>
+            <SwipeGestureRecognizer Direction="Right" Swiped="RightSwipe"/>
+            <SwipeGestureRecognizer Direction="Left" Swiped="LeftSwipe"/>
+        </StackLayout.GestureRecognizers>
     </StackLayout>
 
 </ContentPage>

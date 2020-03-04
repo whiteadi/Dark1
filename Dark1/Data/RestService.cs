@@ -22,7 +22,7 @@ namespace Dark1.Data
 
         public async Task<TheJoke> RefreshDataAsync()
         {
-            var definition = new { type = "", joke = "", setup = "", delivery = "" };
+            var definition = new { type = "", joke = "", setup = "", delivery = "", error = "" };
             var uri = new Uri(string.Format(Constants.JokesUrl, string.Empty));
             try
             {
@@ -42,6 +42,9 @@ namespace Dark1.Data
                             break;
                     }
 
+                } else
+                {
+                    Joke = new TheJoke { Joke = "We need to wait for the DSN updater to kick in. This is a joke... NOT!" };
                 }
             }
             catch (Exception ex)
