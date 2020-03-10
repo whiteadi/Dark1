@@ -1,4 +1,6 @@
 ﻿using Dark1.Data;
+using Plugin.Share;
+using Plugin.Share.Abstractions;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -43,6 +45,16 @@ namespace Dark1
             fetchNewJoke();
         }
 
+        void Button_Clicked_1(object sender, System.EventArgs e)
+        {
+            CrossShare.Current.Share(new ShareMessage
+            {
+                Title = "A good joke!",
+                Text = MyJokeProperty,
+                Url = "https://github.com/whiteadi/Dark1"
+            });
+        }
+
         private async void fetchNewJoke()
         {
             var joke = await App.JokeManager.GetTasksAsync();
@@ -59,5 +71,6 @@ namespace Dark1
         {
             fetchNewJoke();
         }
+
     }
 }

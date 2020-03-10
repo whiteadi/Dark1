@@ -6,12 +6,13 @@
              mc:Ignorable="d"
              x:Class="Dark1.MainPage">
 
-    <StackLayout>
+    <StackLayout BackgroundColor="Black">
         <!-- Place new controls here -->
+        <Button Text="Share" HorizontalOptions="Center" VerticalOptions="Center" Clicked="Button_Clicked_1" />
         <Label Text="{Binding MyJokeProperty}"
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand"
-           TextColor="Black" FontSize = "Large"
+           TextColor="White" FontSize = "Large"
            FontAttributes="Bold"
            Margin="20" 
          />
